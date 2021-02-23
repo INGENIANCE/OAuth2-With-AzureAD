@@ -1,0 +1,28 @@
+server:
+  port: 9090
+  use-forward-headers: true
+  forward-headers-strategy: NATIVE
+  tomcat:
+    internal-proxies: .*
+
+logging:
+  level:
+    org.apache.coyote.http11.Http11InputBuffer: DEBUG
+    org.springframework.security: DEBUG
+
+azure:
+  activedirectory:
+    client-id: <Replace-with-your-WebApp-Client-ID>
+    client-secret: <Replace-with-your-WebApi-URI-application-ID>
+    tenant-id: <Replace-with-your-tenant-ID>
+        scopes:
+          - User.Read
+          - Directory.Read.All
+      ingeniance:
+        scopes:
+          - <Replace-with-your-WebApi-URI-application-ID>/User.Read
+    post-logout-redirect-uri: http://localhost
+
+webapp:
+  registered-endpoints:
+    webapi: http://web-api:9091/admin

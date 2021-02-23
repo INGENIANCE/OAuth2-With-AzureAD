@@ -1,0 +1,19 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <script type="text/javascript" th:inline="javascript">
+    /*<![CDATA[*/
+    window.addEventListener("message", function(e) {
+        if (e.data.authEvent && e.data.authEvent === "[(@{ ${authEvent} })]") {
+            e.source.postMessage({ authEvent: "[(@{ ${authEvent} })]", isAuthenticate: [(@{ ${isAuthenticate} })] }, e.origin);
+        }
+    }, false);
+    /*]]>*/
+    </script>
+</body>
+</html>

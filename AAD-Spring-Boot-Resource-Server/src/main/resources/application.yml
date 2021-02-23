@@ -1,0 +1,7 @@
+server:
+  port: 9091
+
+azure:
+  activedirectory:
+    client-id: <Replace-with-your-WebApp-Client-ID>
+    app-id-uri: <Replace-with-your-WebApi-URI-application-ID>

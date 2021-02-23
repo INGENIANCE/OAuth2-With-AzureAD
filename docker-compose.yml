@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+
+  web-app:
+    build: AAD-Spring-Boot-OAuth2-Client/
+    image: web-app
+    ports:
+      - "9090:9090"
+    networks:
+      - my_network
+
+  web-api:
+    build: AAD-Spring-Boot-Resource-Server/
+    image: web-api
+    ports:
+      - "9091:9091"
+    networks:
+      - my_network
+
+  vue-client:
+    build: AAD-Web-Client-Nginx/
+    image: vue-client
+    networks:
+      - my_network
+
+  reverse-proxy:
+    build: AAD-Reverse-Proxy/
+    image: aad-reverse-proxy
+    depends_on:
+      - web-app
+      - web-api
+      - vue-client
+    ports:
+      - "80:80"
+    networks:
+      - my_network
+
+networks:
+  my_network:
