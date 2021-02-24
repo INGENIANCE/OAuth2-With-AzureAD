@@ -15,6 +15,7 @@ azure:
     client-id: <Replace-with-your-WebApp-Client-ID>
     client-secret: <Replace-with-your-WebApi-URI-application-ID>
     tenant-id: <Replace-with-your-tenant-ID>
+    authorization-clients:
       graph:
         scopes:
           - User.Read
