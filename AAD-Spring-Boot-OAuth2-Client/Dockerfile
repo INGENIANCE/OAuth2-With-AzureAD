@@ -1,4 +1,4 @@
-## Stage 0: Buld env.
+## Stage 0: Build env.
 FROM maven:3.6.0-jdk-11-slim AS BUILD
 LABEL maintainer="Cyrille PERROT"
 ENV MAVEN_HOME .
