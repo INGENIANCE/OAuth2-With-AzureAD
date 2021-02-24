@@ -30,8 +30,9 @@ public class AADOAuth2LoginSecurityConfig extends AADWebSecurityConfigurerAdapte
         // Specific right access.
         http.authorizeRequests()
                 .antMatchers("/login**").permitAll()
-                .antMatchers("/oauth2/authorization**").permitAll();
-                //.antMatchers("/logout-success").permitAll();
+                .antMatchers("/logout").permitAll()
+                .antMatchers("/oauth2/authorization**").permitAll()
+                .antMatchers("/logout-success").permitAll();
 
         http.exceptionHandling()
                 .authenticationEntryPoint(authenticationEntryPoint());
