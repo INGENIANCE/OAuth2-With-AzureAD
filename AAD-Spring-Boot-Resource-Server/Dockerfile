@@ -1,5 +1,5 @@
 ## Stage 0: Buld env.
-FROM registry.gitlab.com/ingeniance/infrastucture/docker-images/build_java_services/java_build:11.0.1 AS BUILD
+FROM maven:3.6.0-jdk-11-slim AS BUILD
 LABEL maintainer="Cyrille PERROT"
 ENV MAVEN_HOME .
 # Copy the project files
@@ -12,7 +12,7 @@ COPY ./src ./src
 RUN mvn clean package spring-boot:repackage -B -DskipTests
 
 ## Stage 1: Run env.
-FROM registry.gitlab.com/ingeniance/infrastucture/docker-images/build_java_services/java_services:11.0.1
+FROM openjdk:11.0.1-jre-slim
 USER root
 # copy over the built artifact from the maven image
 COPY --from=BUILD /src/main/resources/application.yml ./
