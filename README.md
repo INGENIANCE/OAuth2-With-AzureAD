@@ -12,7 +12,7 @@ Une configuration d'un compte *Azure Active Directory* est également nécessair
 
 Ce projet vous permet de déployer localement une infrastructure orientée Web sécurisée à l'aide d'**Azure Active Directory**.
 
-Les différents composants sont dockerisés et un *reverse-proxy* **Nginx** sert a distribuer les requêtes vers le sous-réseau Docker.
+Les différents composants sont dockerisés et un *reverse-proxy* **Nginx** sert à distribuer les requêtes vers le sous-réseau Docker.
 
 Les API sont développées en *Java* via le Framework **Spring Boot** et s'appuient sur le composant `com.azure.spring` du [SDK Java](https://github.com/Azure/azure-sdk-for-java) d'Azure pour gérer le protcole d'accès **OAuth 2.0**.
 
@@ -31,7 +31,7 @@ Pensez à remplacer par vos identifiants Azure les éléments entre <> dans les 
 azure:
   activedirectory:
     client-id: <Replace-with-your-WebApp-Client-ID>
-    client-secret: <Replace-with-your-WebApi-URI-application-ID>
+    client-secret: <Replace-with-your-WebApp-Client-Secret>
     tenant-id: <Replace-with-your-tenant-ID>
     authorization-clients:
       graph:

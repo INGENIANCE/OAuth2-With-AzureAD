@@ -13,7 +13,7 @@ logging:
 azure:
   activedirectory:
     client-id: <Replace-with-your-WebApp-Client-ID>
-    client-secret: <Replace-with-your-WebApi-URI-application-ID>
+    client-secret: <Replace-with-your-WebApp-Client-Secret>
     tenant-id: <Replace-with-your-tenant-ID>
     authorization-clients:
       graph:
