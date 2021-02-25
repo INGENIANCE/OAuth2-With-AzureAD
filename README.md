@@ -2,6 +2,7 @@
 
 > 📃 Cette API est utilisée dans le cadre d'un article disponible depuis le blog technique d'Ingéniance :
 > https://blog.impulsebyingeniance.io/developper-et-deployer-une-application-web-vue-js-java-sous-docker-avec-une-authentification-sous-azure
+
 ## Prérequis
 
 Une configuration d'un compte *Azure Active Directory* est également nécessaire pour profiter pleinement de ce projet. Merci de consulter les articles suivants pour initialiser les applications sur un compte locataire Azure AD :
@@ -54,3 +55,12 @@ A la racine du projet lancez la commande suivante :
 ```shell
 docker-compose up -d
 ```
+Rendez ensuite dans votre navigateur favoris pour tester le projet en lançant l'URL `http://localhost`
+
+## Références
+
+* Documentation de Docker : https://docs.docker.com
+* Documentation de Nginx : https://nginx.org/en/docs/
+* Documentation de Vue.js 2.X : https://fr.vuejs.org/v2/guide/
+* Dépôt GitHub d’Axios : [axios/axios ](https://github.com/axios/axios)
+* Graph Explorer : https://developer.microsoft.com/fr-fr/graph/graph-explorer
