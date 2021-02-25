@@ -55,7 +55,7 @@ A la racine du projet lancez la commande suivante :
 ```shell
 docker-compose up -d
 ```
-Rendez ensuite dans votre navigateur favoris pour tester le projet en lançant l'URL `http://localhost`
+Rendez-vous ensuite dans votre navigateur favoris pour tester le projet en lançant l'URL `http://localhost`
 
 ## Références
 
