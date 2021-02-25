@@ -1,6 +1,6 @@
 # Stage 0, "build-stage", based on Node.js, to build and compile Vue.js
 FROM node:lts-alpine as build-stage
-LABEL maintainer="Cyrille PERROT"
+LABEL maintainer="Cyrille P."
 
 # Define work directory
 WORKDIR /app

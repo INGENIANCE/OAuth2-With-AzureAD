@@ -20,7 +20,7 @@ azure:
         scopes:
           - User.Read
           - Directory.Read.All
-      ingeniance:
+      mydomain:
         scopes:
           - <Replace-with-your-WebApi-URI-application-ID>/User.Read
     post-logout-redirect-uri: http://localhost

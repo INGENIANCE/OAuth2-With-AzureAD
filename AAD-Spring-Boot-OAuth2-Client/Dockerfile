@@ -1,6 +1,6 @@
 ## Stage 0: Build env.
 FROM maven:3.6.0-jdk-11-slim AS BUILD
-LABEL maintainer="Cyrille PERROT"
+LABEL maintainer="Cyrille P."
 ENV MAVEN_HOME .
 # Copy the project files
 COPY ./pom.xml ./pom.xml
