@@ -1,8 +1,8 @@
 # OAuth2-With-AzureAD
 
-## Prérequis
 > 📃 Cette API est utilisée dans le cadre d'un article disponible depuis le blog technique d'Ingéniance :
 > https://blog.impulsebyingeniance.io/developper-et-deployer-une-application-web-vue-js-java-sous-docker-avec-une-authentification-sous-azure
+## Prérequis
 
 Une configuration d'un compte *Azure Active Directory* est également nécessaire pour profiter pleinement de ce projet. Merci de consulter les articles suivants pour initialiser les applications sur un compte locataire Azure AD :
 * https://blog.impulsebyingeniance.io/configurer-role-aad-pour-acces-applications
