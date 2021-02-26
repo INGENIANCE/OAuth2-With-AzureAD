@@ -38,12 +38,12 @@ public class LoginController {
      * Return the logout URL from Azure AD registration
      *
      * @param request HTTP Servlet Request
-     * @param authorizedClient OAuth authorized client from mydomain registration
+     * @param authorizedClient OAuth authorized client from your registration client id
      * @return Azure AD logout URL
      */
     @GetMapping("/aad-logout")
     @ResponseBody
-    public ResponseEntity<?> logout(HttpServletRequest request, @RegisteredOAuth2AuthorizedClient("mydomain") OAuth2AuthorizedClient authorizedClient) {
+    public ResponseEntity<?> logout(HttpServletRequest request, @RegisteredOAuth2AuthorizedClient("myregistrationid") OAuth2AuthorizedClient authorizedClient) {
         final String logoutUrl = authorizedClient.getClientRegistration().getProviderDetails().getConfigurationMetadata().get("end_session_endpoint").toString();
         Map<String, String> logoutDetails = new HashMap<>();
         logoutDetails.put("logoutUrl", logoutUrl);

@@ -85,7 +85,7 @@ public class ClientController {
 
         // Get data from REST API
         Authentication principal = SecurityContextHolder.getContext().getAuthentication();
-        final OAuth2AuthorizedClient ingAuthorizedClient = this.oAuth2AuthorizedClientRepository.loadAuthorizedClient("mydomain", principal, request);
+        final OAuth2AuthorizedClient ingAuthorizedClient = this.oAuth2AuthorizedClientRepository.loadAuthorizedClient("myregistrationid", principal, request);
         ResponseEntity<String> restAPIResponse = this.getRestAPIData(ingAuthorizedClient);
         response.put("apiData", restAPIResponse.getBody());
 
@@ -97,12 +97,12 @@ public class ClientController {
      * User authenticate through obo (on-behalf-off) flow.
      * Need administrator role.
      *
-     * @param authorizedClient OAuth authorized client from mydomain client registration
+     * @param authorizedClient OAuth authorized client from your registration client id
      * @return API Data
      */
     @GetMapping("/api-data")
     public ResponseEntity<String> getRestAPIData(
-            @RegisteredOAuth2AuthorizedClient("mydomain") OAuth2AuthorizedClient authorizedClient
+            @RegisteredOAuth2AuthorizedClient("myregistrationid") OAuth2AuthorizedClient authorizedClient
     ) {
         String result = callWebAPI(authorizedClient);
 
@@ -110,7 +110,7 @@ public class ClientController {
     }
 
     /**
-     * Call mydomain Web API endpoint.
+     * Call Web API endpoint of your registration config.
      *
      * @param authorizedClient Authorized Client
      * @return Response string data.
