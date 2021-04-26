@@ -1,13 +1,13 @@
 # OAuth2-With-AzureAD
 
 > 📃 Cette API est utilisée dans le cadre d'un article disponible depuis le blog technique d'Ingéniance :
-> https://blog.impulsebyingeniance.io/developper-et-deployer-une-application-web-vue-js-java-sous-docker-avec-une-authentification-sous-azure
+> https://techblog.ingeniance.fr/developper-et-deployer-une-application-web-vue-js-java-sous-docker-avec-une-authentification-sous-azure
 
 ## Prérequis
 
 Une configuration d'un compte *Azure Active Directory* est également nécessaire pour profiter pleinement de ce projet. Merci de consulter les articles suivants pour initialiser les applications sur un compte locataire Azure AD :
-* https://blog.impulsebyingeniance.io/configurer-role-aad-pour-acces-applications
-* https://blog.impulsebyingeniance.io/utiliser-les-roles-dazure-active-directory-avec-une-web-api-sous-spring-boot-pour-authentifier-les-utilisateurs
+* https://techblog.ingeniance.fr/configurer-role-aad-pour-acces-applications
+* https://techblog.ingeniance.fr/utiliser-les-roles-dazure-active-directory-avec-une-web-api-sous-spring-boot-pour-authentifier-les-utilisateurs
 
 ## Description
 
